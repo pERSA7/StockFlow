@@ -36,22 +36,22 @@ with db_manager.conn.cursor() as cursor:
 
 try:
     with db_manager.conn.cursor() as cursor: # type: ignore
-        print("[INFO] Creando la base de datos 'db_paniol' si no existe...")
-        cursor.execute("CREATE DATABASE IF NOT EXISTS db_paniol CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;")
+        print("[INFO] Creando la base de datos 'db_stockflow' si no existe...")
+        cursor.execute("CREATE DATABASE IF NOT EXISTS db_stockflow CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;")
     db_manager.conn.commit() # type: ignore
-    print("[INFO] Base de datos 'db_paniol' verificada/creada.")
+    print("[INFO] Base de datos 'db_stockflow' verificada/creada.")
 finally:
     db_manager.disconnect() # Cerramos la conexión sin base de datos
 
-# 2. Conectar a la base 'db_paniol' para crear tablas
+# 2. Conectar a la base 'db_stockflow' para crear tablas
 if not db_manager.connect(): # Ahora conectamos con la configuración por defecto (con DB)
-    print("[FATAL ERROR] No se pudo conectar a la base de datos 'db_paniol'. Abortando.")
+    print("[FATAL ERROR] No se pudo conectar a la base de datos 'db_stockflow'. Abortando.")
     sys.exit(1)
     
-# Conectar ahora sí a la base 'db_paniol'
+# Conectar ahora sí a la base 'db_stockflow'
 try:
     with db_manager.conn.cursor() as cursor: # type: ignore
-        print ("[INFO] Conectado a la base de datos 'db_paniol'.")
+        print ("[INFO] Conectado a la base de datos 'db_stockflow'.")
         # Crear tablas
         print("[INFO] Creando tabla 'herramientas' si no existe...")
         cursor.execute('''
