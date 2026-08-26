@@ -1,0 +1,171 @@
+/* === General === */
+QWidget {
+    font-family: "SF Pro Display";
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    background-color:rgb(170, 170, 170);
+}
+
+/* === Sidebar === */
+QListWidget {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+QListWidget::item {
+    color: black;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+QListWidget::item:selected {
+    background-color:rgb(0, 8, 124);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* === Título === */
+QLabel {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+/* === Tabla === */
+QTableView {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    gridline-color: #e0e0e0;
+    color: black;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-size: 13px;
+    alternate-background-color: #f2f2f2;
+}
+
+QHeaderView::section {
+    background-color:rgb(0, 8, 124);
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+    border: 1px;
+}
+
+/* Botones */
+QPushButton {
+    background-color: rgb(0, 8, 124);
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+QPushButton:hover {
+    background-color: #1a5fb4;
+}
+QPushButton:pressed {
+    background-color: #1c5abc; 
+}
+
+/* Texto */
+QLineEdit {
+    color:black;
+    border: none; /* Sin borde */
+    border-bottom: 1px solid #1a5fb4; /* Solo línea inferior */
+    border-radius: 5px; /* Sin bordes redondeados */
+    padding: 6px 4px;
+    background-color: #bdbdbd; /* Fondo transparente */
+}
+QLineEdit:focus {
+    border: 1px solid #2d89ef;
+}
+
+QComboBox {
+    color: black;
+    background-color: #dcdcdc;  /* Fondo blanco, como las tablas  */
+    border: 1px solid #dcdcdc;  /* Borde gris sutil, como las tablas  */
+    border-radius: 4px;         /* Esquinas redondeadas leves */
+    padding: 5px 8px;           /* Relleno interno (5px arriba/abajo, 8px izq/der) */
+    min-height: 1.5em;          /* Altura mínima para que no sea muy chato */
+}
+
+/* Efecto al pasar el mouse por encima de la caja */
+QComboBox:hover {
+    border-color: #a0a0a0; /* Borde un poco más oscuro */
+}
+
+/* Efecto al seleccionar la caja (foco) */
+QComboBox:focus {
+    border: 1px solid #2d89ef; /* Mismo azul que QLineEdit:focus  */
+}
+
+QComboBox::drop-down {
+    border: none;             /*  */
+    background: transparent;  /* Fondo transparente */
+    width: 20px;              /* Ancho del área del botón */
+}
+
+QComboBox::down-arrow {
+    /* Dejamos que el sistema dibuje la flecha, se verá bien en el contenedor plano */
+}
+
+/* --- Estilo de la LISTA DESPLEGABLE (el popup) --- */
+QComboBox QAbstractItemView {
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    selection-background-color: rgb(0, 8, 124); /* Azul corporativo  */
+    selection-color: white;                     /* Texto blanco al seleccionar [cite: 8] */
+    padding: 4px;           /* Pequeño espacio alrededor de los items */
+    outline: 0px;           /* Sin borde de foco punteado */
+}
+
+/* Estilo de CADA ITEM en la lista desplegable */
+QComboBox QAbstractItemView::item {
+    color: black;
+    padding: 5px 8px;  /* Relleno generoso para cada item */
+    min-height: 1.5em;
+    border-radius: 3px; /* Redondeo leve para el hover */
+}
+
+/* Hover de CADA ITEM en la lista desplegable */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f0f0f0; /* Un gris muy claro al pasar el mouse */
+    color: black;
+}
+
+/* Tablas */
+QTableWidget, QTableView {
+    border: 1px solid #ddd;
+    gridline-color: #e0e0e0;
+    selection-background-color: #2d89ef;
+    selection-color: white;
+    alternate-background-color: #fafafa;
+}
+
+QHeaderView::section {
+    background-color: rgb(0, 8, 124);
+    color: #fafafa;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QPushButton#excelButton {
+    background-color: #217346;   /* Verde corporativo de Excel */
+    color: white;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+QPushButton#excelButton:hover {
+    background-color: #185c36;
+}
+QPushButton#excelButton:pressed {
+    background-color: #0d3c23;
+}
