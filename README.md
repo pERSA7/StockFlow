@@ -1,3 +1,33 @@
+<p align="center">
+  <img src="assets/STOCKFLOW_blanco.png" alt="StockFlow Logo" width="180">
+</p>
+
+<h1 align="center">StockFlow</h1>
+
+<p align="center">
+  Sistema de gestión y control de inventario.
+</p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
+![PyQt6](https://img.shields.io/badge/PyQt6-GUI-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+</p>
+
+---
+📦 Sobre StockFlow
+
+StockFlow es una aplicación de escritorio orientada a la **gestión y control de inventario**, desarrollada inicialmente para administrar las herramientas y recursos de un pañol o taller escolar.
+
+El sistema permite centralizar la información del inventario y gestionar de manera más organizada los recursos disponibles, sus movimientos y su estado. La aplicación utiliza una base de datos **MySQL/MariaDB** para garantizar la persistencia de la información y cuenta con un proceso de configuración automatizado para facilitar la creación inicial de la base de datos, sus tablas y la carga del inventario.
+
+El proyecto fue diseñado inicialmente para un entorno educativo, pero su estructura busca servir como base para evolucionar hacia un sistema de inventario más flexible y adaptable a diferentes contextos.
+
+
+
 ## ⚙️ Instalación y Configuración
 
 Sigue estos pasos para poner en marcha el entorno de desarrollo en tu máquina local.
