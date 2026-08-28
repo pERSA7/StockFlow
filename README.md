@@ -18,7 +18,7 @@
 </p>
 
 ---
-📦 Sobre StockFlow
+## 📦 Sobre StockFlow
 
 StockFlow es una aplicación de escritorio orientada a la **gestión y control de inventario**, desarrollada inicialmente para administrar las herramientas y recursos de un pañol o taller escolar.
 
@@ -26,7 +26,22 @@ El sistema permite centralizar la información del inventario y gestionar de man
 
 El proyecto fue diseñado inicialmente para un entorno educativo, pero su estructura busca servir como base para evolucionar hacia un sistema de inventario más flexible y adaptable a diferentes contextos.
 
+---
 
+## 🛠️ Tecnologías utilizadas
+
+| Tecnología | Uso |
+|---|---|
+| Python | Lenguaje principal |
+| PyQt6 | Interfaz gráfica |
+| MySQL / MariaDB | Persistencia de datos |
+| PyMySQL | Conexión con la base de datos |
+| python-dotenv | Gestión de variables de entorno |
+| CSV | Importación de datos iniciales |
+| QSS | Personalización visual de la interfaz |
+| Git / GitHub | Control de versiones |
+
+---
 
 ## ⚙️ Instalación y Configuración
 
@@ -141,3 +156,25 @@ python -m paniol
 ```bash
 python run.py
 ```
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas.
+
+Si deseas proponer una mejora, corregir un error o agregar una funcionalidad:
+
+1. Realiza un fork del repositorio.
+2. Crea una nueva rama para tu cambio.
+3. Realiza los cambios y crea un commit descriptivo.
+4. Envía un Pull Request.
+
+Para cambios importantes, se recomienda abrir primero un Issue para discutir la propuesta.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está distribuido bajo la licencia MIT.
+
+Consulta el archivo [LICENSE](LICENSE) para obtener más información.
