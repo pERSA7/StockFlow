@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/STOCKFLOW_blanco.png" alt="StockFlow Logo" width="180">
+  <img src="paniol/assets/STOCKFLOW_blanco.png" alt="StockFlow Logo" width="180">
 </p>
 
 <h1 align="center">StockFlow</h1>
@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
-![PyQt6](https://img.shields.io/badge/PyQt6-GUI-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+  <img src="https://img.shields.io/badge/Python-3.x-blue" alt="Python">
+  <img src="https://img.shields.io/badge/MySQL-Database-blue" alt="MySQL">
+  <img src="https://img.shields.io/badge/PyQt6-GUI-green" alt="PyQt6">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
+</p>
 
 </p>
 
