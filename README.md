@@ -1,74 +1,113 @@
-# taller-escuela
-Automatizar el registro de prestamos de herramientas a los alumnos de Taller. Llevar el control de stock de las herramientas.
+## ⚙️ Instalación y Configuración
 
+Sigue estos pasos para poner en marcha el entorno de desarrollo en tu máquina local.
 
-## Requisitos
+### 1. Clonar el repositorio
 
-* Python 3.x
-* pip (el gestor de paquetes de Python)
+```bash
+git clone https://github.com/TuUsuario/taller-escuela.git
+cd taller-escuela
+```
 
-## Instalación
+### 2. Crear y activar un entorno virtual
 
-1.  **Clona el repositorio:**
-    ```bash
-    git clone [https://github.com/TuUsuario/NombreDelRepositorio.git](https://github.com/TuUsuario/NombreDelRepositorio.git)
-    cd NombreDelRepositorio
-    ```
+**En Windows (PowerShell):**
 
-2.  **Crea un entorno virtual (recomendado):**
-    ```powershell
-    python -m venv venv
-    ```
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
 
-3.  **Activa el entorno virtual en PowerShell:**
-    ```powershell
-    .\venv\Scripts\Activate.ps1
-    ```
-    *Nota: Es posible que necesites habilitar la ejecución de scripts en PowerShell si no lo has hecho antes. Puedes hacerlo ejecutando `Set-ExecutionPolicy RemoteSigned` como administrador y confirmando con `Y`.*
+**En Linux / macOS:**
 
-4.  **Instala las dependencias:**
-    ```powershell
-    pip install -r requirements.txt
-    ```
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-## Configuración de la base de datos
+### 3. Instalar las dependencias
 
-Para configurar la conexión a la base de datos, el proyecto utiliza un archivo `.env` que **no está incluido en el repositorio** por razones de seguridad. Para poner en marcha el proyecto en tu entorno local, sigue estos pasos:
+```bash
+pip install -r requirements.txt
+```
 
-1. Copia el archivo de ejemplo `.env.example` y renómbralo a `.env` en la raíz del proyecto:
+---
 
-    ```powershell
-    copy .env.example .env
-    ```
+## 🗄️ Configuración de la Base de Datos (MySQL / MariaDB)
 
-2. Abre el archivo `.env` y completa con tus propios datos de conexión a la base de datos:
+El sistema requiere un servidor **MySQL o MariaDB** ejecutándose localmente o de forma remota.
 
-    ```env
-    DB_HOST=localhost
-    DB_USER=tu_usuario
-    DB_PASSWORD=tu_contraseña
-    DB_NAME=db_pañol
-    ```
+### 1. Configurar las credenciales (`.env`)
 
-3. Guarda el archivo `.env`. Este archivo será usado por el proyecto para conectar a la base de datos.
+El proyecto utiliza variables de entorno para proteger las credenciales de la base de datos.
 
-4. Cada desarrollador debe hacer este paso en su máquina local para no compartir credenciales sensibles en el repositorio.
+Primero, copia el archivo de ejemplo `.env.example` y renómbralo a `.env`.
 
-## Archivo `config.py.example`
+**En Linux / macOS:**
 
-El proyecto también incluye un archivo `config.py.example` que sirve como plantilla para la configuración de la conexión a la base de datos en Python.
+```bash
+cp .env.example .env
+```
 
-- Este archivo contiene la estructura y el código necesario para leer las variables de entorno desde el archivo `.env`.
-- **No contiene datos sensibles** y sí debe estar incluido en el repositorio para que todos los desarrolladores tengan la referencia.
+**En Windows:**
 
-### Qué debe hacer cada desarrollador:
+```cmd
+copy .env.example .env
+```
 
-1. Copiar `config.py.example` y renombrarlo a `config.py` en la raíz del proyecto:
+Luego, abre el archivo `.env` y completa tus datos de conexión:
 
-    ```bash
-    cp config.py.example config.py
-    ```
+```env
+DB_HOST=localhost
+DB_USER=tu_usuario
+DB_PASSWORD=tu_contraseña
+DB_NAME=db_pañol
+DB_PORT=3306
+```
 
-2. No modificar `config.py` para poner datos sensibles directamente, sino mantener la lectura desde las variables de entorno definidas en `.env`.
+> ⚠️ **Importante:** El archivo `.env` contiene información sensible y no debe subirse al repositorio. Asegúrate de incluirlo en el archivo `.gitignore`.
 
-3. Así, cada uno podrá tener su configuración local sin subir claves al repositorio.
+### 2. Configurar el script de inicialización (`.env.setup`)
+
+El script automatizado de creación de la base de datos utiliza `.env.setup` para conectarse a MySQL con un usuario que tenga permisos de administrador o permisos para crear bases de datos.
+
+Configura las credenciales necesarias:
+
+```env
+DB_HOST=localhost
+DB_USER=usuario_administrador
+DB_PASSWORD=tu_contraseña
+DB_NAME=db_pañol
+DB_PORT=3306
+```
+
+Luego, ejecuta el script de configuración inicial:
+
+```bash
+python paniol/setup/db_setup.py
+```
+
+Este proceso creará automáticamente:
+
+- La base de datos.
+- Las tablas necesarias.
+- Las restricciones y relaciones.
+- El inventario inicial a partir de los archivos CSV.
+
+---
+
+## 🚀 Ejecución de la Aplicación
+
+Una vez configurado el entorno virtual y la base de datos, puedes iniciar la aplicación de escritorio.
+
+### Mediante el módulo principal
+
+```bash
+python -m paniol
+```
+
+### Mediante el script lanzador
+
+```bash
+python run.py
+```
