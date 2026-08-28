@@ -5,8 +5,8 @@ Sigue estos pasos para poner en marcha el entorno de desarrollo en tu máquina l
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TuUsuario/taller-escuela.git
-cd taller-escuela
+git clone https://github.com/pERSA7/StockFlow.git
+cd stockflow
 ```
 
 ### 2. Crear y activar un entorno virtual
@@ -61,7 +61,7 @@ Luego, abre el archivo `.env` y completa tus datos de conexión:
 DB_HOST=localhost
 DB_USER=tu_usuario
 DB_PASSWORD=tu_contraseña
-DB_NAME=db_pañol
+DB_NAME=db_stockflow
 DB_PORT=3306
 ```
 
@@ -77,7 +77,7 @@ Configura las credenciales necesarias:
 DB_HOST=localhost
 DB_USER=usuario_administrador
 DB_PASSWORD=tu_contraseña
-DB_NAME=db_pañol
+DB_NAME=db_stockflow
 DB_PORT=3306
 ```
 
